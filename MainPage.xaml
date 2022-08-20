@@ -26,26 +26,26 @@
             <Label 
                 Text="(Wow that was a mouth-full!)"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="8"
                 Margin="-25"
                 HorizontalOptions="Center" />
                 
 
-            <Label 
-                Text="Welcome to .NET Multi-platform App UI"
+            <Label
+                x:Name="NumberDisplay"
+                Text="Press button to display a random number"
                 SemanticProperties.HeadingLevel="Level3"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                HorizontalTextAlignment="Center"
                 FontSize="18"
                 Margin="20"
                 HorizontalOptions="Center" />
 
             <Button 
-                x:Name="CounterBtn"
-                Text="Click me"
+                Text="Genrate number"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Margin="-30"/>
 
         </VerticalStackLayout>
     </ScrollView>

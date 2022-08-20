@@ -2,7 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	Random number = new Random();
 
 	public MainPage()
 	{
@@ -11,14 +11,10 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count += 10;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+			NumberDisplay.Text = $"{number.Next()}";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		SemanticScreenReader.Announce(NumberDisplay.Text);
 	}
 }
 
