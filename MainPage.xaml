@@ -10,22 +10,34 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="infinity.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
                 
             <Label 
-                Text="Hello, World!"
+                Text="Calles pseudo-random number generator sample 1.0!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                TextColor="Magenta"
+                HorizontalTextAlignment="Center"
                 HorizontalOptions="Center" />
-            
+
             <Label 
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="(Wow that was a mouth-full!)"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="8"
+                Margin="-25"
+                HorizontalOptions="Center" />
+                
+
+            <Label 
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
+                Margin="20"
                 HorizontalOptions="Center" />
 
             <Button 
