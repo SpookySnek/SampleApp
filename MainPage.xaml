@@ -30,13 +30,25 @@
                 Margin="-25"
                 HorizontalOptions="Center" />
 
-            <Entry x:Name="FromNumber"
-                Placeholder="From 0"
-                   />
+            <HorizontalStackLayout
+            Spacing="10" 
+            Padding="10,0"
+            Margin="5"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+                >
 
-            <Entry x:Name="ToNumber"
-                Placeholder="To 2147483647"
-                   />
+                <Entry x:Name="FromNumber"
+                    Placeholder="From 0"
+                    WidthRequest="125"
+                       />
+
+                <Entry x:Name="ToNumber"
+                    Placeholder="To 2147483647"
+                    WidthRequest="125"
+                       />
+
+            </HorizontalStackLayout>
 
             <Label
                 x:Name="NumberDisplay"
@@ -44,7 +56,7 @@
                 SemanticProperties.HeadingLevel="Level3"
                 HorizontalTextAlignment="Center"
                 FontSize="18"
-                Margin="20"
+                Margin="10"
                 HorizontalOptions="Center" />
 
             <Button 
@@ -53,7 +65,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center"
                 Margin="-30"/>
-            
+
             <Label 
                 Text="(If input is invalid, default values will be used)"
                 FontSize="8"

@@ -18,6 +18,7 @@ public partial class MainPage : ContentPage
     private int To()
     {
         bool success = int.TryParse(ToNumber.Text, out int parsedTo);
+
         if (success)
         {
             return parsedTo;
