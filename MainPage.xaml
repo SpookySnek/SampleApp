@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleApp.MainPage">
-			 
+
     <ScrollView>
         <VerticalStackLayout 
             Spacing="25" 
@@ -11,10 +11,10 @@
 
             <Image
                 Source="infinity.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                SemanticProperties.Description="Infinity logo"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-                
+
             <Label 
                 Text="Calles pseudo-random number generator sample 1.0!"
                 SemanticProperties.HeadingLevel="Level1"
@@ -29,7 +29,17 @@
                 FontSize="8"
                 Margin="-25"
                 HorizontalOptions="Center" />
-                
+
+            <Entry x:Name="FromNumber"
+                Placeholder="From"
+                TextChanged="OnTextChanged"
+                   />
+            
+            <Entry x:Name="ToNumber"
+                Placeholder="To"
+                TextChanged="OnTextChanged"
+                   />
+
 
             <Label
                 x:Name="NumberDisplay"
@@ -49,5 +59,5 @@
 
         </VerticalStackLayout>
     </ScrollView>
- 
+
 </ContentPage>
