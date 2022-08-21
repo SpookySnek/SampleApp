@@ -2,51 +2,47 @@
 
 public partial class MainPage : ContentPage
 
-
 {
-
-
-    void OnTextChanged(object sender, EventArgs e)
-    {
-        var text = ((Entry)sender).Text;
-        Console.WriteLine(text);
-    }
 
     Random number = new Random();
 
-	private int To()
-    {
-        int parsedTo;
-        bool success = int.TryParse(ToNumber.Text, out parsedTo);
-        if (success)
-        {
-            return parsedTo;
-        }
-        return 0;
-    }
-
     private int From()
     {
-        int parsedFrom;
-        bool success = int.TryParse(FromNumber.Text, out parsedFrom);
+        bool success = int.TryParse(FromNumber.Text, out int parsedFrom);
         if (success)
         {
             return parsedFrom;
         }
         return 0;
     }
+    private int To()
+    {
+        bool success = int.TryParse(ToNumber.Text, out int parsedTo);
+        if (success)
+        {
+            return parsedTo;
+        }
+        return 2147483647;
+    }
+
 
     public MainPage()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
+    private void OnCounterClicked(object sender, EventArgs e)
+    {
+        if (From() <= To())
+        {
+            NumberDisplay.Text = $"{number.Next(From(), To())}";
+        }
+        if (From() > To())
+        {
+            NumberDisplay.Text = "XXX From value is larger than To value XXX";
+        }
 
-			NumberDisplay.Text = $"{number.Next(From(), To())}";
-
-		SemanticScreenReader.Announce(NumberDisplay.Text);
-	}
+        SemanticScreenReader.Announce(NumberDisplay.Text);
+    }
 }
 

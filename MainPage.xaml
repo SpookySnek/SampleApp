@@ -31,15 +31,12 @@
                 HorizontalOptions="Center" />
 
             <Entry x:Name="FromNumber"
-                Placeholder="From"
-                TextChanged="OnTextChanged"
-                   />
-            
-            <Entry x:Name="ToNumber"
-                Placeholder="To"
-                TextChanged="OnTextChanged"
+                Placeholder="From 0"
                    />
 
+            <Entry x:Name="ToNumber"
+                Placeholder="To 2147483647"
+                   />
 
             <Label
                 x:Name="NumberDisplay"
@@ -56,6 +53,12 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center"
                 Margin="-30"/>
+            
+            <Label 
+                Text="(If input is invalid, default values will be used)"
+                FontSize="8"
+                Margin="10"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
