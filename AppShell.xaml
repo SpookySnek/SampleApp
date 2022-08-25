@@ -5,10 +5,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SampleApp"
     Shell.FlyoutBehavior="Disabled">
+    <TabBar>
+        <Tab Title="Random Number">
+            <!--Icon="cat.png"-->
+            <ShellContent ContentTemplate="{DataTemplate local:NumbgenPage}" />
+        </Tab>
+        <!--<Tab Title="Dogs"
+        Icon="dog.png">
+        <ShellContent ContentTemplate="{DataTemplate views:DogsPage}" />
+        </Tab>-->
+    </TabBar>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:NumbgenPage}"
-        Route="NumbgenPage" />
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:NumbgenPage}"
+    Route="NumbgenPage" />-->
 
 </Shell>
