@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:SampleApp"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-        <Tab Title="Random Number">
+        <Tab Title="Number Generator">
             <!--Icon="cat.png"-->
             <ShellContent ContentTemplate="{DataTemplate local:NumbgenPage}" />
         </Tab>

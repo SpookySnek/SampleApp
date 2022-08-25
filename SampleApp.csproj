@@ -60,9 +60,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Update="TranslatorPage.xaml.cs">
+		  <DependentUpon>TranslatorPage.xaml</DependentUpon>
+		</Compile>
 		<Compile Update="NumbgenPage.xaml.cs">
 			<DependentUpon>NumbgenPage.xaml</DependentUpon>
 		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="TranslatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
