@@ -48,15 +48,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\dotnet_bot.svg" />
+		<MauiImage Remove="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\dotnet_bot.svg" />
+		<None Remove="Resources\Images\dotnet_bot.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
+		<Folder Include="Resources\Images\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="NumbgenPage.xaml.cs">
+			<DependentUpon>NumbgenPage.xaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 </Project>

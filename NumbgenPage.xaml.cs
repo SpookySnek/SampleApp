@@ -1,6 +1,6 @@
 ﻿namespace SampleApp;
 
-public partial class MainPage : ContentPage
+public partial class NumbgenPage : ContentPage
 
 {
 
@@ -27,7 +27,7 @@ public partial class MainPage : ContentPage
     }
 
 
-    public MainPage()
+    public NumbgenPage()
     {
         InitializeComponent();
     }
