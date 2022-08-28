@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Core;
+namespace SampleApp.Core;
 
 public static class PhonewordTranslator
 {

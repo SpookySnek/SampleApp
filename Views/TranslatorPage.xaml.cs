@@ -12,7 +12,21 @@ public partial class TranslatorPage : ContentPage
     private void OnTranslate(object sender, EventArgs e)
     {
         string enteredNumber = PhoneNumberText.Text;
+
+/* Unmerged change from project 'SampleApp (net6.0-windows10.0.19041.0)'
+Before:
         translatedNumber = Core.PhonewordTranslator.ToNumber(enteredNumber);
+After:
+        translatedNumber = PhonewordTranslator.ToNumber(enteredNumber);
+*/
+
+/* Unmerged change from project 'SampleApp (net6.0-windows10.0.19041.0)'
+Before:
+        translatedNumber = SampleApp.views.PhonewordTranslator.ToNumber(enteredNumber);
+After:
+        translatedNumber = PhonewordTranslator.ToNumber(enteredNumber);
+*/
+        translatedNumber = SampleApp.Core.PhonewordTranslator.ToNumber(enteredNumber);
 
         if (!string.IsNullOrEmpty(translatedNumber))
         {
