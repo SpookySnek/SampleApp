@@ -19,7 +19,7 @@ namespace SampleAppUnitTests
             result.Should().Be(5);
         }
         [Fact]
-        public void should_translate_number()
+        public void should_translate_word_to_number()
         {
             // arrange
             var sample = "fiskpinnar";
@@ -29,6 +29,30 @@ namespace SampleAppUnitTests
 
             // assert
             result.Should().Be("3475746627");
+        }
+        [Fact]
+        public void should_translate_word_with_number()
+        {
+            // arrange
+            var sample = "3is5pinna7";
+
+            // act
+            var result = PhonewordTranslator.ToNumber(sample);
+
+            // assert
+            result.Should().Be("3475746627");
+        }
+        [Fact]
+        public void should_return_null()
+        {
+            // arrange
+            var sample = "едц";
+
+            // act
+            var result = PhonewordTranslator.ToNumber(sample);
+
+            // assert
+            result.Should().Be(null);
         }
     }
 }
