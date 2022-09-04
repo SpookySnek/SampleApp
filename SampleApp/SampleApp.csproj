@@ -85,6 +85,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<MauiXaml Update="Views\BinaryPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\TranslatorPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

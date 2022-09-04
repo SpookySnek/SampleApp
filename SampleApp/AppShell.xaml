@@ -12,6 +12,9 @@
         <Tab Title="Phone Translator">
             <ShellContent ContentTemplate="{DataTemplate local:TranslatorPage}" />
         </Tab>
+        <Tab Title="Binary Translator">
+            <ShellContent ContentTemplate="{DataTemplate local:BinaryPage}" />
+        </Tab>
     </TabBar>
 
     <!--<ShellContent
