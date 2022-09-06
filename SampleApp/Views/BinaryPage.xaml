@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleApp.BinaryPage">
-    <VerticalStackLayout>
-        <Label
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center"
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+             x:Class="SampleApp.BinaryPage"
+             BackgroundColor="DarkSeaGreen">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Label Text = "Enter a Binary to conver to to string!"
+                   FontSize ="20"/>
+            <Entry x:Name = "BinaryText"
+                   Text = "01000110"/>
+            <Button x:Name = "TranslateButton"
+                    Text = "Translate"
+                    Clicked = "OnTranslate"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage> 
