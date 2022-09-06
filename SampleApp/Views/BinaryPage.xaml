@@ -5,13 +5,19 @@
              BackgroundColor="DarkSeaGreen">
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="20">
-            <Label Text = "Enter a Binary to convert to string!"
+            <Label Text = "Enter text to convert to binary!"
+                   FontSize ="20"/>
+            <Entry x:Name = "Text"
+                   Text = "Made by Calle"/>
+            <Button x:Name = "TranslateToBinaryButton"
+                    Text = "Translate"/>
+            <Label Text = "Enter binary to convert to text!"
                    FontSize ="20"/>
             <Entry x:Name = "BinaryText"
                    Text = "01000110"/>
-            <Button x:Name = "TranslateButton"
+            <Button x:Name = "TranslateToTextButton"
                     Text = "Translate"
-                    Clicked = "OnTranslate"/>
+                    Clicked = "OnTranslateToText"/>
         </VerticalStackLayout>
     </ScrollView>
-</ContentPage> 
+</ContentPage>

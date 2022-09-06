@@ -9,7 +9,7 @@ public partial class BinaryPage : ContentPage
 
     private string translatedInput;
 
-    private void OnTranslate(object sender, EventArgs e)
+    private void OnTranslateToText(object sender, EventArgs e)
     {
         string enteredInput = BinaryText.Text;
 
@@ -17,11 +17,11 @@ public partial class BinaryPage : ContentPage
 
         if (!string.IsNullOrEmpty(translatedInput))
         {
-            TranslateButton.Text = translatedInput;
+            TranslateToTextButton.Text = translatedInput;
         }
         else
         {
-            TranslateButton.Text = "Invalid input!";
+            TranslateToTextButton.Text = "Invalid input!";
         }
     }
 }
