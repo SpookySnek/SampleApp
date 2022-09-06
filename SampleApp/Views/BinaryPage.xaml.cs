@@ -24,4 +24,20 @@ public partial class BinaryPage : ContentPage
             TranslateToTextButton.Text = "Invalid input!";
         }
     }
+
+    private void OnTranslateToBinary(object sender, EventArgs e)
+    {
+        string enteredInput = Text.Text;
+
+        translatedInput = SampleApp.Core.BinaryTranslator.TranslateToBinary(enteredInput);
+
+        if (!string.IsNullOrEmpty(translatedInput))
+        {
+            TranslateToBinaryButton.Text = translatedInput;
+        }
+        else
+        {
+            TranslateToBinaryButton.Text = "Invalid input!";
+        }
+    }
 }

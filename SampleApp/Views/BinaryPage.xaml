@@ -10,7 +10,8 @@
             <Entry x:Name = "Text"
                    Text = "Made by Calle"/>
             <Button x:Name = "TranslateToBinaryButton"
-                    Text = "Translate"/>
+                    Text = "Translate"
+                    Clicked = "OnTranslateToBinary"/>
             <Label Text = "Enter binary to convert to text!"
                    FontSize ="20"/>
             <Entry x:Name = "BinaryText"

@@ -20,5 +20,15 @@ public static class BinaryTranslator
     {
         return Encoding.ASCII.GetString(GetBytesFromBinaryString(raw));
     }
+
+    public static string TranslateToBinary(string raw)
+    {
+        var result = "";
+        foreach (char ch in raw)
+        {
+           result += Convert.ToString((int)ch, 2).PadLeft(8, '0');
+        }
+        return result;
+    }
 }
 
