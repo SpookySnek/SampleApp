@@ -1,77 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleApp.NumbgenPage"
-             BackgroundColor="DarkSeaGreen">
+<ContentPage
+    x:Class="SampleApp.NumbgenPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="DarkSeaGreen">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
             Padding="30,0"
+            Spacing="25"
             VerticalOptions="Center">
 
             <Image
-                Source="infinity.png"
-                SemanticProperties.Description="Infinity logo"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Infinity logo"
+                Source="infinity.png" />
 
             <Label
-                Text="Calles pseudo-random number generator sample 1.0!"
-                SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                TextColor="Magenta"
+                HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
-                HorizontalOptions="Center" />
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Calles pseudo-random number generator sample 1.0!"
+                TextColor="Magenta" />
 
             <Label
-                Text="(Wow that was a mouth-full!)"
-                SemanticProperties.HeadingLevel="Level2"
-                FontSize="8"
                 Margin="-25"
-                HorizontalOptions="Center" />
+                FontSize="8"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="(Wow that was a mouth-full!)" />
 
             <HorizontalStackLayout
-                Spacing="10"
-                Padding="10,0"
                 Margin="5"
-                VerticalOptions="Center"
+                Padding="10,0"
                 HorizontalOptions="Center"
-                >
+                Spacing="10"
+                VerticalOptions="Center">
 
-                <Entry x:Name="FromNumber"
-                       Placeholder="From 0"
-                       WidthRequest="125"
-                       />
+                <Entry
+                    x:Name="FromNumber"
+                    Placeholder="From 0"
+                    WidthRequest="125" />
 
-                <Entry x:Name="ToNumber"
-                       Placeholder="To 2147483647"
-                       WidthRequest="125"
-                       />
+                <Entry
+                    x:Name="ToNumber"
+                    Placeholder="To 2147483647"
+                    WidthRequest="125" />
 
             </HorizontalStackLayout>
 
             <Label
                 x:Name="NumberDisplay"
-                Text="Press button to display a random number"
-                SemanticProperties.HeadingLevel="Level3"
-                HorizontalTextAlignment="Center"
-                FontSize="18"
                 Margin="10"
-                HorizontalOptions="Center" />
+                FontSize="18"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                SemanticProperties.HeadingLevel="Level3"
+                Text="Press button to display a random number" />
 
             <Button
-                Text="Genrate number"
-                SemanticProperties.Hint="Counts the number of times you click"
+                Margin="-30"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center"
-                Margin="-30"/>
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Genrate number" />
 
             <Label
-                Text="(If input is invalid, default values will be used)"
-                FontSize="8"
                 Margin="10"
-                HorizontalOptions="Center" />
+                FontSize="8"
+                HorizontalOptions="Center"
+                Text="(If input is invalid, default values will be used)" />
 
         </VerticalStackLayout>
     </ScrollView>

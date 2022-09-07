@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SampleApp.BinaryPage"
-             BackgroundColor="DarkSeaGreen">
+<ContentPage
+    x:Class="SampleApp.BinaryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="DarkSeaGreen">
     <ScrollView>
-        <VerticalStackLayout Spacing="15" Padding="20">
-            <Label Text = "Enter text to convert to binary!"
-                   FontSize ="20"/>
-            <Entry x:Name = "Text"
-                   Text = "Made by Calle"/>
-            <Button x:Name = "TranslateToBinaryButton"
-                    Text = "Translate"
-                    Clicked = "OnTranslateToBinary"/>
-            <Label Text = "Enter binary to convert to text!"
-                   FontSize ="20"/>
-            <Entry x:Name = "BinaryText"
-                   Text = "01000110"/>
-            <Button x:Name = "TranslateToTextButton"
-                    Text = "Translate"
-                    Clicked = "OnTranslateToText"/>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label FontSize="20" Text="Enter text to convert to binary!" />
+            <Entry
+                x:Name="Text"
+                Placeholder="Made by Calle"
+                Text="" />
+            <Button
+                x:Name="TranslateToBinaryButton"
+                Clicked="OnTranslateToBinary"
+                Text="Translate" />
+            <Label FontSize="20" Text="Enter binary to convert to text!" />
+            <Entry
+                x:Name="BinaryText"
+                Placeholder="01000110"
+                Text="" />
+            <Button
+                x:Name="TranslateToTextButton"
+                Clicked="OnTranslateToText"
+                Text="Translate" />
+            <Editor
+                x:Name="Output"
+                AutoSize="TextChanges"
+                IsReadOnly="True"
+                IsSpellCheckEnabled="False"
+                MaxLength="20000"
+                Placeholder="Results will appear here!"
+                Text="" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

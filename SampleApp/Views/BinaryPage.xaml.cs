@@ -17,11 +17,11 @@ public partial class BinaryPage : ContentPage
 
         if (!string.IsNullOrEmpty(translatedInput))
         {
-            TranslateToTextButton.Text = translatedInput;
+            Output.Text = translatedInput;
         }
         else
         {
-            TranslateToTextButton.Text = "Invalid input!";
+            Output.Text = "Invalid input!";
         }
     }
 
@@ -33,11 +33,11 @@ public partial class BinaryPage : ContentPage
 
         if (!string.IsNullOrEmpty(translatedInput))
         {
-            TranslateToBinaryButton.Text = translatedInput;
+            Output.Text = translatedInput;
         }
         else
         {
-            TranslateToBinaryButton.Text = "Invalid input!";
+            Output.Text = "Invalid input!";
         }
     }
 }
