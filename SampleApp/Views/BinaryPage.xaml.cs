@@ -15,8 +15,7 @@ public partial class BinaryPage : ContentPage
     {
         string enteredInput = BinaryText.Text;
 
-        if (enteredInput.Any(char.IsWhiteSpace) || Regex.IsMatch(enteredInput, "[2-9]") || !enteredInput.Any(char.IsLetterOrDigit)
-            || enteredInput.Any(char.IsLetter))
+        if (!Regex.IsMatch(enteredInput, "^[0-1]+$") || enteredInput.Length % 8 != 0)
         {
             Output.Text = "Invalid input! Make sure you don't have any whitespaces";
         }
