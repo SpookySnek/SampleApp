@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace SampleApp;
 
 public partial class BinaryPage : ContentPage
@@ -13,9 +15,10 @@ public partial class BinaryPage : ContentPage
     {
         string enteredInput = BinaryText.Text;
 
-        if (enteredInput.Any(char.IsWhiteSpace))
+        if (enteredInput.Any(char.IsWhiteSpace) || Regex.IsMatch(enteredInput, "[2-9]") || !enteredInput.Any(char.IsLetterOrDigit)
+            || enteredInput.Any(char.IsLetter))
         {
-            Output.Text = "Whitespaces are not allowed!";
+            Output.Text = "Invalid input! Make sure you don't have any whitespaces";
         }
         else
         {
