@@ -69,5 +69,18 @@ namespace SampleAppUnitTests
             // assert
             result.Should().Be("011001100110100101110011011010110111000001101001011011100110111001100001011100100010000001101101011101010110110101110011");
         }
+        [Fact]
+        public void should_return_text_translation()
+        {
+            // arrange
+            string binary = "011001100110100101110011011010110111000001101001011011100110111001100001011100100010000001101101011101010110110101110011";
+
+            // act
+            var result = BinaryTranslator.TranslateToString(binary);
+
+            // assert
+            result.Should().Be("fiskpinnar mums");
+        }
+
     }
 }
